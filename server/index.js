@@ -14,8 +14,8 @@ const path = require('path');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
-
-app.use(cors({credentials:true,origin:'http://localhost:5173'}));
+console.log("__dirname",__dirname)
+app.use(cors({credentials:true,origin:'https://my-blog-vs10.onrender.com'}));
 app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
